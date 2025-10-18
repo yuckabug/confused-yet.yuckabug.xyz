@@ -22,7 +22,7 @@
     "happy-dom": "20.0.5",
     "lefthook": "1.13.6",
     "npm-run-all2": "8.0.4",
-    "wrangler": "4.15.2"
+    "wrangler": "4.43.0"
   },
   "dependencies": {
     "@yuckabug/stringpea": "^0.1.0"
