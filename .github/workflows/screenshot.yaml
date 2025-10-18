@@ -39,6 +39,8 @@ jobs:
 
       - name: push changes to GitHub
         run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           git add "$screenshot_path"
           git commit -m "Update preview screenshot" || exit 0
           git push origin main
