@@ -1,0 +1,22 @@
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+  "$schema": "https://unpkg.com/wrangler@latest/config-schema.json",
+  "name": "confused-yet-dot-yuckabug-dot-xyz",
+  "compatibility_date": "2025-05-19",
+  "assets": {
+    "directory": "./public",
+    "not_found_handling": "404-page"
+  },
+  "observability": {
+    "enabled": true
+  },
+  "routes": [
+    {
+      "pattern": "confused-yet.yuckabug.xyz",
+      "custom_domain": true
+    }
+  ]
+}

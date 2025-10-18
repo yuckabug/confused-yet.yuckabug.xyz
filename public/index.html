@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Confused Yet? | Yuckabug</title>
+    <meta name="description" content="Interactive demo for testing confusable string distance">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css">
+  </head>
+
+  <body>
+    <h1>Confused Yet? 🤔</h1>
+    <p>
+      by <a href="https://yuckabug.org">yuckabug.org</a>🐸
+    </p>
+
+    <hr>
+
+    <p>Compare two strings to see their confusable distance. </p>
+
+    <form id="confusableForm">
+      <label for="string1">First String:</label>
+      <input type="text" id="string1" name="string1" placeholder="e.g., HELLO" required>
+
+      <label for="string2">Second String:</label>
+      <input type="text" id="string2" name="string2" placeholder="e.g., HELL0" required>
+
+      <button type="submit">Calculate Distance</button>
+    </form>
+
+    <div id="result">
+      <h3>Result:</h3>
+      <p>
+        Confusable Distance:
+        <span class="distance-value" id="distanceValue">0</span>
+      </p>
+      <p id="explanation"></p>
+    </div>
+
+    <div class="examples">
+      <h3>Try these examples:</h3>
+      <ul>
+        <li>
+          <code>HELLO</code>vs <code>HELL0</code>→ Distance: 0
+        </li>
+        <li>
+          <code>paypal</code>vs <code>paypa1</code>→ Distance: 0
+        </li>
+        <li>
+          <code>admin</code>vs <code>adm1n</code>→ Distance: 1
+        </li>
+        <li>
+          <code>google</code>vs <code>g00gle</code>→ Distance: 0
+        </li>
+      </ul>
+      <p>
+        <small>Distance 0 = confusably identical (looks the same after normalization)</small>
+      </p>
+    </div>
+
+    <hr>
+
+    <nav>
+      <ul>
+        <li>
+          <a href="https://github.com/yuckabug/confused-yet.yuckabug.xyz">Demo source</a>
+        </li>
+        <li>
+          <a href="https://github.com/yuckabug/stringpea">Library Source</a>
+        </li>
+        <li>
+          <a href="https://www.npmjs.com/package/@yuckabug/stringpea">npm</a>📦
+        </li>
+      </ul>
+    </nav>
+
+    <script src="demo.js"></script>
+  </body>
+</html>

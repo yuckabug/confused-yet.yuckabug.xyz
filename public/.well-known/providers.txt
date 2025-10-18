@@ -1,0 +1,10 @@
+Draft: 2025-05-19
+Privacy-policy: https://confused-yet@yuckabug.xyz/privacy-policy
+
+Name: Cloudflare
+URL: https://www.cloudflare.com
+Opt-out: No
+Purpose: CDN and DDoS protection
+Data: Reads IP address and request logs, not shared with third parties
+Location: US
+Retention: None

@@ -1,0 +1,31 @@
+{
+  "name": "confused-yet.yuckabug.xyz",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "types:check": "tsc --noEmit",
+    "format:check": "biome format",
+    "format:fix": "biome format --write",
+    "lint:check": "biome lint",
+    "lint:fix": "biome lint --write",
+    "check": "run-p *:check",
+    "fix": "run-s *:fix",
+    "dev": "wrangler dev",
+    "bundle": "bun run build.ts",
+    "build": "wrangler build",
+    "deploy": "bun run bundle && bun run build && wrangler deploy"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.2.6",
+    "@happy-dom/global-registrator": "^20.0.5",
+    "@types/bun": "^1.3.0",
+    "happy-dom": "^20.0.5",
+    "lefthook": "^1.13.6",
+    "npm-run-all2": "^8.0.4",
+    "wrangler": "4.15.2"
+  },
+  "dependencies": {
+    "@yuckabug/stringpea": "^0.1.0"
+  },
+  "packageManager": "bun@1.3.0"
+}
